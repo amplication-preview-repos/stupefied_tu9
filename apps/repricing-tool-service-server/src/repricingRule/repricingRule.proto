@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+                 package repricingRule;
+service RepricingRuleService {
+ rpc createRepricingRule (RepricingRuleCreateInput) returns (RepricingRule) {}
+rpc repricingRules (findManyParams) returns (stream RepricingRule) {}
+rpc repricingRule (RepricingRuleWhereUniqueInput) returns (RepricingRule) {}
+rpc updateRepricingRule (RepricingRuleUpdateInput) returns (RepricingRule) {}
+rpc deleteRepricingRule (RepricingRuleWhereUniqueInput) returns (RepricingRule) {} 
+ }
+message RepricingRuleCreateInput {
+string createdAt = 1;
+string id = 2;
+int32 maximumPrice = 3;
+int32 minimumPrice = 4;
+string ruleDescription = 5;
+int32 targetProfitMargin = 6;
+string updatedAt = 7;
+};
+message RepricingRule {
+string createdAt = 1;
+string id = 2;
+int32 maximumPrice = 3;
+int32 minimumPrice = 4;
+string ruleDescription = 5;
+int32 targetProfitMargin = 6;
+string updatedAt = 7;
+};
+message RepricingRuleWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+int32 maximumPrice = 3;
+int32 minimumPrice = 4;
+string ruleDescription = 5;
+int32 targetProfitMargin = 6;
+string updatedAt = 7;
+};
+message RepricingRuleUpdateInput {
+string createdAt = 1;
+string id = 2;
+int32 maximumPrice = 3;
+int32 minimumPrice = 4;
+string ruleDescription = 5;
+int32 targetProfitMargin = 6;
+string updatedAt = 7;
+};
+message findManyParams {
+
+};

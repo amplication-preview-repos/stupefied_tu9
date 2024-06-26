@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+                 package performanceReport;
+service PerformanceReportService {
+ rpc createPerformanceReport (PerformanceReportCreateInput) returns (PerformanceReport) {}
+rpc performanceReports (findManyParams) returns (stream PerformanceReport) {}
+rpc performanceReport (PerformanceReportWhereUniqueInput) returns (PerformanceReport) {}
+rpc updatePerformanceReport (PerformanceReportUpdateInput) returns (PerformanceReport) {}
+rpc deletePerformanceReport (PerformanceReportWhereUniqueInput) returns (PerformanceReport) {} 
+ }
+message PerformanceReportCreateInput {
+string competitorAnalysis = 1;
+string createdAt = 2;
+string id = 3;
+string pricingHistory = 4;
+int32 sales = 5;
+string updatedAt = 6;
+};
+message PerformanceReport {
+string competitorAnalysis = 1;
+string createdAt = 2;
+string id = 3;
+string pricingHistory = 4;
+int32 sales = 5;
+string updatedAt = 6;
+};
+message PerformanceReportWhereUniqueInput {
+string competitorAnalysis = 1;
+string createdAt = 2;
+string id = 3;
+string pricingHistory = 4;
+int32 sales = 5;
+string updatedAt = 6;
+};
+message PerformanceReportUpdateInput {
+string competitorAnalysis = 1;
+string createdAt = 2;
+string id = 3;
+string pricingHistory = 4;
+int32 sales = 5;
+string updatedAt = 6;
+};
+message findManyParams {
+
+};

@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+                 package competitor;
+service CompetitorService {
+ rpc createCompetitor (CompetitorCreateInput) returns (Competitor) {}
+rpc competitors (findManyParams) returns (stream Competitor) {}
+rpc competitor (CompetitorWhereUniqueInput) returns (Competitor) {}
+rpc updateCompetitor (CompetitorUpdateInput) returns (Competitor) {}
+rpc deleteCompetitor (CompetitorWhereUniqueInput) returns (Competitor) {} 
+ }
+message CompetitorCreateInput {
+int32 competitorPrice = 1;
+string createdAt = 2;
+string id = 3;
+string marketCondition = 4;
+string updatedAt = 5;
+};
+message Competitor {
+int32 competitorPrice = 1;
+string createdAt = 2;
+string id = 3;
+string marketCondition = 4;
+string updatedAt = 5;
+};
+message CompetitorWhereUniqueInput {
+int32 competitorPrice = 1;
+string createdAt = 2;
+string id = 3;
+string marketCondition = 4;
+string updatedAt = 5;
+};
+message CompetitorUpdateInput {
+int32 competitorPrice = 1;
+string createdAt = 2;
+string id = 3;
+string marketCondition = 4;
+string updatedAt = 5;
+};
+message findManyParams {
+
+};
